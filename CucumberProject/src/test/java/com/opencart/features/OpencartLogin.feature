@@ -1,9 +1,5 @@
 Feature: Searching a product in opencart application as guest user and registered user using automation script
 
-Scenario: Verify user is able to hit opencart application
-Given User should launch the opencart application
-Then  User should see the your store logo in the left side
-
 Scenario: Verify user is able to search product using searchbox
 When User should  enter the product name in the search box
 And User should click on the searchbutton.

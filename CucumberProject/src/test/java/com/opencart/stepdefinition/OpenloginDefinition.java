@@ -16,12 +16,7 @@ public class OpenloginDefinition extends BaseClass{
 	public static HomePage hp;
 //	public static ProductDetailPage pd;
 public static LoginPage lp; 
-@Given("User should launch the opencart application")
-public void user_should_launch_the_opencart_application() {
-	 getBrowser("chrome"); 
-	 getUrl("https://demo.opencart.com/index.php?route=common/home");
-		  
-}
+
 
 @Then("User should see the your store logo in the left side")
 public void user_should_see_the_your_store_logo_in_the_left_side() {

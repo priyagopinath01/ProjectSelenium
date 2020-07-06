@@ -21,7 +21,7 @@ public class BookedItinerary extends BaseClass {
 	@FindBy(xpath="//input[@value='priya']")
 	private WebElement firstName;
 	
-	@FindBy(xpath="(//input[@type='submit'])[2]")
+	@FindBy(xpath="(//input[@type='submit'])[1]")
 	private WebElement go;
 
 	public WebElement getGo() {

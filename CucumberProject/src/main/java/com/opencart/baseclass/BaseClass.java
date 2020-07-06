@@ -18,13 +18,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.utils.LoadProp;
+
 public class BaseClass {
 	public static WebDriver driver;
 
-	public static void getBrowser(String browserName) {
+	public static WebDriver getBrowser(String browserName) throws Exception {
+		LoadProp lp=new LoadProp();
 		try {
 		if(browserName.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\priya gopinath\\eclipse-workspace\\CucumberProject\\src\\test\\resource\\com\\opencart\\drivers\\chromedriver.exe" );
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\test\\resource\\com\\opencart\\drivers\\chromedriver.exe" );
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equalsIgnoreCase("firefox")) {
@@ -37,11 +40,12 @@ public class BaseClass {
 		}
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Long.parseLong(lp.getWait()), TimeUnit.SECONDS);
 		}
 		catch (Exception e) {
 			System.out.println("invalid browser");
 		}
+		return  driver;
 	}
 
 	public static void getUrl(String Url) {

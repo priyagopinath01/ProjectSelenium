@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="25.12">
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify user should see the hotel application" time="0.292">
+<system-out><![CDATA[When User should see the Adactin text on the header.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify user is able to login the application" time="5.694">
+<system-out><![CDATA[When User should enter the username "priyagopinath" in the userfield........passed
+Then User should enter the password "Z94RR4" in the passwordfield...........passed
+And User should click the login button......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify user is able to give checkout dates later than checkin" time="1.203">
+<system-out><![CDATA[When User should select the location "Melbourne" in the location pannel.....passed
+Then User  should select the hotels "2" in the hotels pannel................passed
+Then User should  select the roomtype "Standard" in the roomtype pannel.....passed
+Then User should select number of rooms "3" in the numpannel................passed
+And User should select adult "2" in the adultperroom pannel.................passed
+And User should select childrenperroom "0" in the childrenperroom pannel....passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify whether it goes to next page when  checkin and checkout are correctly given" time="2.191">
+<system-out><![CDATA[And User should enter the expected checkin date "21/06/2020" in the pannel..passed
+And User should enter the expected checkout date "23/06/2020" in the pannel.passed
+And User should click the search button.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify whether the datas in the select hotel page are same as given datas in search hotel page" time="0.389">
+<system-out><![CDATA[Given User should get the text in the location pannel of select hotel.......passed
+Then User should compare it with the given checkin data.....................passed
+Then User should compare it with the given checkout data....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify wether the datas displayed in book hotel page is same as select hotel page" time="8.544">
+<system-out><![CDATA[When User should compare all datas displayed in select hotel page with book hotel page.passed
+Then User should check the total price calculated is correct................passed
+Then User should confirm the fnl bill price is correctly calculated.........passed
+Then User should eneter first name  "priya"  in the name field..............passed
+And User should enter last name  "gopinath"  in the last name field.........passed
+And User should enter the address  "induvihar"  in the address field........passed
+And User should enter the card details and select book now..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Testing the adactin hotel reservation application using automation test" name="Verify wether order confirmation is diplayed in confirmation page and itenary details are correct and cant edit" time="6.306">
+<system-out><![CDATA[When User should check whether order confirmation is displayed..............passed
+Then User should check order confirmation is not editable...................passed
+Then User should click myItinerary..........................................passed
+Then User should check whether order can search in searchbox................passed
+And User should confirm that enetered datas are not editable................passed
+]]></system-out>
+</testcase>
+</testsuite>

@@ -1,0 +1,4 @@
+com\opencart\stepdefinition\OpenloginDefinition.class
+com\opencart\testrunner\TestRunner.class
+com\opencart\stepdefinition\AdactinDefinition.class
+com\hooks\Hooks.class
